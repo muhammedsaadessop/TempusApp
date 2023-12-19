@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- this is the pop up menu that the user will see once the quick add, on the navigation bar, is clicked-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bottom_sheet_shape">
+
+    <Button
+        android:id="@+id/add_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:text="New Category"
+        android:textColor="#34A8FF"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/add_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_category"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:text="New Task"
+        android:textColor="#34A8FF"
+        android:textSize="15sp" />
+
+</RelativeLayout>
+

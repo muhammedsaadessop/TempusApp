@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/interval_cardview"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECCEFF">
+
+        <ImageButton
+            android:id="@+id/interval_btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:background="#ECCEFF"
+            android:src="@drawable/close_icon" />
+
+        <TextView
+            android:id="@+id/interval_title_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/interval_btn_exit"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="category name here"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/interval_title_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/interval_title_first"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="is 25% completed. \n \n WELL DONE!!!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/interval_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/interval_title_second"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/hundred" />
+
+        <Button
+            android:id="@+id/interval_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/interval_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#B27AFF"
+            android:text="OK" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

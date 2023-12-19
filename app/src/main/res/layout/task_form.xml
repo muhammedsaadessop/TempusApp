@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tempus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_toEndOf="@id/logo"
+            android:fontFamily="@font/baloo_bhai_2"
+            android:gravity="center"
+            android:text="TEMPUS"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_menu"
+        android:layout_below="@id/top_menu"
+        android:background="#D6D6D6"
+        android:padding="50px">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/frame_background"
+            android:paddingLeft="9dp"
+            android:paddingTop="0.9dp"
+            android:paddingRight="9dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_task_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5px"
+                    android:text="Create Task "
+                    android:textColor="@color/black"
+                    android:textSize="95px" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/warning_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="210px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:layout_marginRight="10px"
+                    android:background="@color/black"
+                    android:padding="10px"
+                    app:cardCornerRadius="50px">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFEFD1">
+
+                        <TextView
+                            android:id="@+id/line_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="17px"
+                            android:layout_marginBottom="10px"
+                            android:text="Please create a category"
+                            android:textColor="#D00000"
+                            android:textSize="55px" />
+
+                        <TextView
+                            android:id="@+id/line_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/line_one"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="before proceeding with your task."
+                            android:textColor="#D00000"
+                            android:textSize="55px" />
+
+                        <ImageView
+                            android:layout_width="90px"
+                            android:layout_height="90px"
+                            android:layout_above="@id/line_two"
+                            android:layout_marginLeft="65px"
+                            android:src="@drawable/warning" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/create_task_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgGallery"
+                        android:layout_width="60px"
+                        android:layout_height="120px"
+                        android:layout_below="@id/taskNameLabel"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="10px"
+                        android:layout_toLeftOf="@id/taskNameInput"
+                        android:background="@drawable/circle"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/baseline_photo_camera_24" />
+
+                    <TextView
+                        android:id="@+id/taskNameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8px"
+                        android:text="Task Name"
+                        android:textColor="@color/black"
+                        android:textSize="50px" />
+
+                    <EditText
+                        android:id="@+id/taskNameInput"
+                        android:layout_width="650px"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/taskNameLabel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/description_rectangle"
+                        android:gravity="top|start"
+                        android:hint="  Enter task name"
+                        android:paddingStart="20dp"
+                        android:paddingRight="5dp" />
+
+                    <TextView
+                        android:id="@+id/taskDescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/taskNameInput"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8dp"
+                        android:text="Task Description"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/taskDescriptionInput"
+                        android:layout_width="650px"
+                        android:layout_height="250dp"
+                        android:layout_below="@id/taskDescriptionLabel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/description_rectangle"
+                        android:gravity="top|start"
+                        android:hint="  Enter Task description"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:paddingStart="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/dateLabel"
+                        android:layout_width="270px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/taskDescriptionInput"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="8dp"
+                        android:text="Date:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/selectedDateText"
+                        android:layout_width="500px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/taskDescriptionInput"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@+id/dateLabel"
+                        android:background="@drawable/description_rectangle"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/selectDateButton"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/taskDescriptionInput"
+                        android:layout_marginTop="19px"
+                        android:layout_toRightOf="@id/selectedDateText"
+                        android:background="@drawable/calendar1"
+                        android:drawablePadding="8dp"
+                        android:onClick="selectDate" />
+
+                    <View
+                        android:id="@+id/dateView"
+                        android:layout_width="200px"
+                        android:layout_height="1px"
+                        android:paddingLeft="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/dateLabel"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/startTimeLabel"
+                        android:layout_width="270px"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/dateLabel"
+
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="15dp"
+                        android:text="Start Time:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/selectedStartTimeText"
+                        android:layout_width="500px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/dateView"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toRightOf="@+id/startTimeLabel"
+                        android:background="@drawable/description_rectangle"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/startTimeView"
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/startTimeLabel"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/selectStartTimeButton"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/selectedDateText"
+                        android:layout_marginTop="14dp"
+                        android:layout_toRightOf="@id/selectedStartTimeText"
+                        android:background="@drawable/clock"
+                        android:onClick="selectTime" />
+
+
+                    <TextView
+                        android:id="@+id/endTimeLabel"
+                        android:layout_width="270px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/startTimeLabel"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="15dp"
+                        android:text="End Time:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/selectedEndTimeText"
+                        android:layout_width="500px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/startTimeLabel"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@+id/endTimeLabel"
+                        android:background="@drawable/description_rectangle"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/selectEndTimeButton"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_below="@id/selectedStartTimeText"
+                        android:layout_marginTop="25px"
+                        android:layout_toRightOf="@id/selectedEndTimeText"
+                        android:background="@drawable/clock"
+                        android:onClick="selectEndTime" />
+
+                    <View
+                        android:id="@+id/endTimeView"
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/endTimeLabel" />
+
+                    <TextView
+
+                        android:id="@+id/minimumGoalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/endTimeView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="Min Hours Goal"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/minimumGoalSpinner"
+                        android:layout_width="650px"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/minimumGoalLabel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:id="@+id/maximumGoalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/minimumGoalSpinner"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:text="Max Hours Goal"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/maximumGoalSpinner"
+                        android:layout_width="650px"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/maximumGoalLabel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:id="@+id/category_spinnerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/maximumGoalSpinner"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="19dp"
+                        android:layout_marginEnd="147dp"
+                        android:text="Category"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/category_spinner"
+                        android:layout_width="650px"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/category_spinnerName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:spinnerMode="dropdown" />
+
+                    <Button
+                        android:id="@+id/createTask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150px"
+                        android:layout_below="@id/category_spinner"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25px"
+                        android:backgroundTint="@color/white"
+                        android:text="Create"
+                        android:textColor="@color/purple_700"
+                        android:textSize="17sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/hometbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Home"
+            android:padding="5dp"
+            android:src="@drawable/home_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:layout_marginTop="120px"
+            android:text="HOME"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/breakstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hometbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Breaks"
+            android:padding="5dp"
+            android:src="@drawable/break_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300px"
+            android:layout_marginTop="120px"
+            android:text="BREAKS"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/addbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/breakstbtn"
+            android:background="@drawable/gradient_add"
+            android:contentDescription="Add"
+            android:padding="5dp"
+            android:src="@drawable/add_icon" />
+
+        <ImageButton
+            android:id="@+id/statstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/addbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Stats"
+            android:padding="5dp"
+            android:src="@drawable/stats_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120px"
+            android:layout_marginRight="300px"
+            android:text="STATS"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/settingstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/statstbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Setting"
+            android:padding="5dp"
+            android:src="@drawable/settings_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120px"
+            android:layout_marginRight="70px"
+            android:text="PROFILE"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tempus"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/logo"
+            android:fontFamily="@font/baloo_bhai_2"
+            android:text="TASK PAGE"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_menu"
+        android:layout_below="@id/top_menu">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D6D6D6"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/timer_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/task_timer"
+                        android:layout_width="450px"
+                        android:layout_height="350px"
+                        android:layout_alignParentStart="true"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/task_view_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="Task Timer"
+                                android:textColor="@android:color/black"
+                                android:textSize="70px" />
+
+                            <TextView
+                                android:id="@+id/text_view_countdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/task_view_title"
+                                android:layout_centerHorizontal="true"
+                                android:text="00:00"
+                                android:textColor="@android:color/black"
+                                android:textSize="80px" />
+
+                            <ImageButton
+                                android:id="@+id/task_set"
+                                android:layout_width="150px"
+                                android:layout_height="100px"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="#B596F8"
+                                android:src="@drawable/stop_icon"
+                                android:text="Set"
+                                android:textSize="25px" />
+
+
+                            <ImageButton
+                                android:id="@+id/task_start_pause"
+                                android:layout_width="150px"
+                                android:layout_height="100px"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="#B596F8"
+                                android:src="@drawable/play_icon"
+                                android:text="start"
+                                android:textSize="25px" />
+
+                            <ImageButton
+                                android:id="@+id/task_reset"
+                                android:layout_width="150px"
+                                android:layout_height="100px"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="#B596F8"
+                                android:src="@drawable/reset_icon"
+                                android:text="reset"
+                                android:textSize="25px" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/braeks_timer"
+                        android:layout_width="450px"
+                        android:layout_height="350px"
+                        android:layout_alignParentEnd="true"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/break_view_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="Break Timer"
+                                android:textColor="@android:color/black"
+                                android:textSize="70px" />
+
+                            <TextView
+                                android:id="@+id/break_view_countdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/break_view_title"
+                                android:layout_centerHorizontal="true"
+                                android:text="00:00"
+                                android:textColor="@android:color/black"
+                                android:textSize="80px" />
+
+                            <ImageButton
+                                android:id="@+id/break_set"
+                                android:layout_width="150px"
+                                android:layout_height="100px"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="#B596F8"
+                                android:src="@drawable/stop_icon"
+                                android:text="Set"
+                                android:textSize="25px" />
+
+
+                            <ImageButton
+                                android:id="@+id/break_start_pause"
+                                android:layout_width="150px"
+                                android:layout_height="100px"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="#B596F8"
+                                android:src="@drawable/play_icon"
+                                android:text="start"
+                                android:textSize="25px" />
+
+                            <ImageButton
+                                android:id="@+id/break_reset"
+                                android:layout_width="150px"
+                                android:layout_height="100px"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="#B596F8"
+                                android:src="@drawable/reset_icon"
+                                android:text="reset"
+                                android:textSize="25px" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/timer_view"
+                    android:layout_marginTop="50px"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/date_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date goes here "
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/task_image"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:clickable="true"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/task_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/task_image"
+                            android:layout_centerHorizontal="true"
+                            android:text="Task Name"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/category_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/task_name"
+                            android:layout_centerHorizontal="true"
+                            android:text="category name"
+                            android:textColor="#949494"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/description_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/category_name"
+                            android:text="Description:"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/description_text"
+                            android:layout_width="350dp"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/description_title"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/description_rectangle"
+                            android:text="The description goes here... "
+                            android:textColor="#949494"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/description_text"
+                            android:text="Start Time:"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/start_date_display"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/description_text"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/start_date"
+                            android:background="@drawable/description_rectangle"
+                            android:gravity="center"
+                            android:text="2002/07/16"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/end_date"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/start_date"
+                            android:text="End Time:"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/end_date_display"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/start_date"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/end_date"
+                            android:background="@drawable/description_rectangle"
+                            android:gravity="center"
+                            android:text="2002/07/20"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/max_title"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/end_date"
+                            android:paddingTop="4dp"
+                            android:text="Max Completed Hours:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/max_text"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/end_date"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/max_title"
+                            android:background="@drawable/description_rectangle"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/min_title"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/max_title"
+                            android:paddingTop="4dp"
+                            android:text="Min Completed Hours:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/min_text"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/max_title"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/min_title"
+                            android:background="@drawable/description_rectangle"
+                            android:gravity="center" />
+
+
+                        <TextView
+                            android:id="@+id/hour_title"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/min_text"
+                            android:gravity="center_vertical"
+                            android:paddingTop="4dp"
+                            android:text="Total Hours:"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/hour_text"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/min_title"
+                            android:layout_marginTop="2dp"
+                            android:layout_toEndOf="@id/hour_title"
+                            android:background="@drawable/description_rectangle"
+                            android:gravity="center" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/hometbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Home"
+            android:padding="5dp"
+            android:src="@drawable/home_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:layout_marginTop="120px"
+            android:text="HOME"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/breakstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hometbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Breaks"
+            android:padding="5dp"
+            android:src="@drawable/break_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300px"
+            android:layout_marginTop="120px"
+            android:text="BREAKS"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/addbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/breakstbtn"
+            android:background="@drawable/gradient_add"
+            android:contentDescription="Add"
+            android:padding="5dp"
+            android:src="@drawable/add_icon" />
+
+        <ImageButton
+            android:id="@+id/statstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/addbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Stats"
+            android:padding="5dp"
+            android:src="@drawable/stats_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120px"
+            android:layout_marginRight="300px"
+            android:text="STATS"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/settingstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/statstbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Setting"
+            android:padding="5dp"
+            android:src="@drawable/settings_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120px"
+            android:layout_marginRight="70px"
+            android:text="PROFILE"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+
+Kkotlin:S1144×"-Remove this unused private "toMillis" method.(ïùÈÞùÿÿÿÿ
+Fkotlin:S108ô")Either remove or fill this block of code.(¼€¼èûÿÿÿÿ
+Jkotlin:S1481¯",Remove this unused "millis2" local variable.(ÜåŒ÷þÿÿÿÿ
+Nkotlin:S1481„"0Remove this unused "currentTime" local variable.(àÃ€ÿÿÿÿÿÿ
+lkotlin:S1192ë"NDefine a constant instead of duplicating this literal "Timer Running" 3 times.(þ˜¬Þþÿÿÿÿ
+mkotlin:S1192ã"ODefine a constant instead of duplicating this literal "%02d:%02d:%02d" 3 times.(¾ü¯œúÿÿÿÿ
+hkotlin:S1192€"JDefine a constant instead of duplicating this literal "%02d:%02d" 3 times.(¯ãÑˆýÿÿÿÿ
+Ekotlin:S6518ú",Replace function call with indexed accessor.(à§ãú
+Jkotlin:S6518¤",Replace function call with indexed accessor.(£ÎÈ»øÿÿÿÿ

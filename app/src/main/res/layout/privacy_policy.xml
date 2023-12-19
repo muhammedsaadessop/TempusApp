@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparent"
+    app:cardCornerRadius="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="900px"
+        android:layout_height="1700px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/frame_background"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/policy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="This Notice explains how we obtain, use and disclose your personal information, in accordance with the requirements of the Protection of Personal Information Act (“POPIA”).\n\n
+
+This privacy policy (Policy) discloses the privacy practices for any software Services (including any applications developed for Android) owned by Tempus. Each of the services covered by this Policy are referred to as a site or sites.\n\n
+
+Your privacy is extremely important to us and we're committed to protect it. Any questions you might have about this Privacy Policy should be addressed to our Data Protection Officer at joshuavanrooyen48@gmail.com.\n\n
+
+1. By using Tempus, you agree to the collection and use of your data (Personal Data) and your customers data (Customer Data).\n\n\n
+
+Personal Data
+Such data may include things such as your name, username, password, email address, information, as well as relevant demographic information. In addition we may automatically collect information about your device or internet access, such as IP address, internet service provider (ISP), referring/exit pages, platform type, and your usage of our application.\n\n\n
+
+Customer Data
+You may submit various types of data into the Sites for storing and processing Customer Data. Customer Data may include, without limitation, personal information such as names, email addresses of your customers, potential customers and other users of and visitors, or any other properties (“People”). We will only use, disclose and otherwise process Customer Data for the purposes set forth in your agreement with us.\n\n\n
+
+How we use the data we collect\n\n
+
+To provide and maintain our products and services
+To process your customer support inquiries and deliver customer service
+To process your payments
+To control unauthorised use or abuse or detect, investigate and prevent activities that are unlawful or that violate our policies
+To monitor usage or the service
+To communicate directly with you, including by sending you newsletters, promotions and special offers or information about new products and services.
+Sharing Your Information with Third Parties\n\n
+
+We share your data strictly with sub-processors/companies that allow us to operate the service, as follows:\n\n
+
+Data Hosting
+Google Firebase\n\n\n
+
+
+2. We will never sell or rent any information with any third parties.\n\n
+
+3. Data Ownership
+You always retain ownership rights you may have in any content, data you upload or otherwise provide to us through the sites (the user content).
+We provide an open API that gives you access to all data stored in Tempus. We limit the access to personal data to those needing to act out the processing (our technical support team).\n\n
+
+4. You have the Right to be Forgotten. You can delete all data related to your account at any time.\n\n
+
+5. We don't tolerate spam. We will send out emails to customers only in the case of service related announcements.\n\n
+
+6. EU individuals have rights to access personal information about them, to limit use and disclosure of their personal information, and to ensure that such personal information is accurate and relevant for the purposes for which it is collected. Tempus is committed to respect these rights (Right to Access, Right to be Forgotten and Data Portability).
+In case of a security breach all affected customers will be notified by email and directly in the app within 72 hours of first having become aware of the breach. Tempus designs and develops all systems with Privacy in mind and follows best practices such as data minimisation and limiting the access to personal data to those needing to act out the processing (our technical support team).\n\n\n
+
+
+Last updated on 3 July, 2023
+
+
+
+For Demonstration Purposes"
+                        android:textColor="@color/black"
+                        android:textSize="45px" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:layout_below="@id/policy"
+                        android:text="I Agree"
+                        android:textColor="@color/purple_700"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

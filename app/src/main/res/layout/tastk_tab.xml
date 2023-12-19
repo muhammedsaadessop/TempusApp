@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/task_item_image"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/circle" />
+
+        <TextView
+            android:id="@+id/mTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@id/task_item_image"
+            android:paddingLeft="10dp"
+            android:text="Task 1"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/mSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTitle2"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@id/task_item_image"
+            android:paddingLeft="10dp"
+            android:text="Category 1"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/mHpurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:text="01h 00"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

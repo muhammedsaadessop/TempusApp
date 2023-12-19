@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/logo"
+            android:fontFamily="@font/baloo_bhai_2"
+            android:text="SETTINGS"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_menu"
+        android:layout_below="@id/top_menu"
+        android:background="#D6D6D6">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D6D6D6"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/account_setting"
+                android:layout_width="440px"
+                android:layout_height="310px"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_margin="15dp"
+                android:layout_marginLeft="22dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="50dp"
+                tools:ignore="PxUsage,RtlHardcoded">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/account_setting_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/settings_icon"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/account_setting_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/account_setting_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Account Settings"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/delete_user"
+                android:layout_width="440px"
+                android:layout_height="310px"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                tools:ignore="PxUsage">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/delete_data_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/dd" />
+
+                    <TextView
+                        android:id="@+id/delete_data_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/delete_data_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Delete Account"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/delete_data"
+                android:layout_width="440px"
+                android:layout_height="310px"
+                android:layout_row="01"
+                android:layout_column="0"
+                android:layout_margin="15dp"
+                android:layout_marginLeft="22dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                tools:ignore="PxUsage">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/delete_user_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/da" />
+
+                    <TextView
+                        android:id="@+id/delete_user_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/delete_user_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Delete Data"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/delete_cache"
+                android:layout_width="440px"
+                android:layout_height="310px"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/delete_cache_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/cc" />
+
+                    <TextView
+                        android:id="@+id/delete_cache_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/delete_cache_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Clear Cache"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/privacy"
+                android:layout_width="440px"
+                android:layout_height="310px"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_margin="15dp"
+                android:layout_marginLeft="22dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/privacy_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/pp" />
+
+                    <TextView
+                        android:id="@+id/privacy_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/privacy_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Privacy Policy"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logout"
+                android:layout_width="440px"
+                android:layout_height="310px"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/logout_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/lo" />
+
+                    <TextView
+                        android:id="@+id/logout_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/logout_img"
+                        android:layout_centerHorizontal="true"
+                        android:text="Log Out"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/hometbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Home"
+            android:padding="5dp"
+            android:src="@drawable/home_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:layout_marginTop="120px"
+            android:text="HOME"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/breakstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hometbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Breaks"
+            android:padding="5dp"
+            android:src="@drawable/break_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300px"
+            android:layout_marginTop="120px"
+            android:text="BREAKS"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/addbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/breakstbtn"
+            android:background="@drawable/gradient_add"
+            android:contentDescription="Add"
+            android:padding="5dp"
+            android:src="@drawable/add_icon" />
+
+        <ImageButton
+            android:id="@+id/statstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/addbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Stats"
+            android:padding="5dp"
+            android:src="@drawable/stats_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120px"
+            android:layout_marginRight="300px"
+            android:text="STATS"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/settingstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/statstbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Setting"
+            android:padding="5dp"
+            android:src="@drawable/settings_selected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="125px"
+            android:layout_marginRight="62px"
+            android:text="PROFILE"
+            android:textColor="#6644F2"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

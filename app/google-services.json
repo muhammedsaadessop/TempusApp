@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "400180899063",
+    "firebase_url": "https://tempus-a54ea-default-rtdb.firebaseio.com",
+    "project_id": "tempus-a54ea",
+    "storage_bucket": "tempus-a54ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400180899063:android:0055c73b87ee42d8c677f2",
+        "android_client_info": {
+          "package_name": "com.example.tempus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400180899063-b5m7st9hdia5qshc19am4fbcdnh55863.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiBan25rsLsBezAGbogwLfC5eWo-jdQws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400180899063-b5m7st9hdia5qshc19am4fbcdnh55863.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400180899063:android:e5f2ed662021ea47c677f2",
+        "android_client_info": {
+          "package_name": "com.example.tempus_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400180899063-b5m7st9hdia5qshc19am4fbcdnh55863.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiBan25rsLsBezAGbogwLfC5eWo-jdQws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400180899063-b5m7st9hdia5qshc19am4fbcdnh55863.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- this is the stats page where the user can view a graphical overview of all their tasks-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tempus"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/logo"
+            android:fontFamily="@font/baloo_bhai_2"
+            android:gravity="center"
+            android:text="STATISTICS"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_menu"
+        android:layout_below="@id/top_menu">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D6D6D6"
+            android:padding="10dp"
+            tools:context=".StatsFragment">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D6D6D6"
+                android:columnCount="1"
+                android:orientation="vertical"
+                android:rowCount="1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.github.mikephil.charting.charts.CombinedChart
+                            android:id="@+id/statsChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/hometbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Home"
+            android:padding="5dp"
+            android:src="@drawable/home_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:layout_marginTop="120px"
+            android:text="HOME"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/breakstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hometbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Breaks"
+            android:padding="5dp"
+            android:src="@drawable/break_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300px"
+            android:layout_marginTop="120px"
+            android:text="BREAKS"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/addbtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/breakstbtn"
+            android:background="@drawable/gradient_add"
+            android:contentDescription="Add"
+            android:padding="5dp"
+            android:src="@drawable/add_icon" />
+
+        <ImageButton
+            android:id="@+id/statstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/addbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Stats"
+            android:padding="5dp"
+            android:src="@drawable/stats_selected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="129px"
+            android:layout_marginRight="300px"
+            android:text="STATS"
+            android:textColor="#6644F2"
+            android:textSize="11sp" />
+
+        <ImageButton
+            android:id="@+id/settingstbtn"
+            android:layout_width="230px"
+            android:layout_height="200px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/statstbtn"
+            android:background="@drawable/rectangle"
+            android:contentDescription="Setting"
+            android:padding="5dp"
+            android:src="@drawable/settings_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120px"
+            android:layout_marginRight="70px"
+            android:text="PROFILE"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

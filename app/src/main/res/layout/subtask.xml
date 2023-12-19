@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newcard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/mTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:paddingLeft="10dp"
+            android:text="Task 1"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/mHpurs2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:text="01h 00"
+            android:textAlignment="center"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

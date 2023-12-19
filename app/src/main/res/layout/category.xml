@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/stuff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardMaxElevation="5dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="Category 1"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/mNum_tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="task number goes here"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/mHours_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="01h 00"
+                android:textSize="17sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_category"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/mNum_tasks"
+                android:padding="10dp" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stuff"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardMaxElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/tasksLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
